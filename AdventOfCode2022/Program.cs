@@ -12,3 +12,6 @@ Console.WriteLine($"Puzzle 6: {Day3.GetBadgeItemsSum()}");
 
 Console.WriteLine($"Puzzle 7: {Day4.CountFullyOverlappingRanges()}");
 Console.WriteLine($"Puzzle 8: {Day4.CountOverlappingRanges()}");
+
+Console.WriteLine($"Puzzle 9: {Day5.GetTopCrates<CrateMover9000>()}");
+Console.WriteLine($"Puzzle 10: {Day5.GetTopCrates<CrateMover9001>()}");
