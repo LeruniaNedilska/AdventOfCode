@@ -15,3 +15,6 @@ Console.WriteLine($"Puzzle 8: {Day4.CountOverlappingRanges()}");
 
 Console.WriteLine($"Puzzle 9: {Day5.GetTopCrates<CrateMover9000>()}");
 Console.WriteLine($"Puzzle 10: {Day5.GetTopCrates<CrateMover9001>()}");
+
+Console.WriteLine($"Puzzle 11: {Day6.GetFirstMarkerIndex(4)}");
+Console.WriteLine($"Puzzle 12: {Day6.GetFirstMarkerIndex(14)}");
