@@ -18,3 +18,6 @@ Console.WriteLine($"Puzzle 10: {Day5.GetTopCrates<CrateMover9001>()}");
 
 Console.WriteLine($"Puzzle 11: {Day6.GetFirstMarkerIndex(4)}");
 Console.WriteLine($"Puzzle 12: {Day6.GetFirstMarkerIndex(14)}");
+
+Console.WriteLine($"Puzzle 13: {Day7.GetDirectoriesSizeOver100000Sum()}");
+Console.WriteLine($"Puzzle 14: {Day7.GetTheSmallestDirectoryToDelete()}");
