@@ -21,3 +21,6 @@ Console.WriteLine($"Puzzle 12: {Day6.GetFirstMarkerIndex(14)}");
 
 Console.WriteLine($"Puzzle 13: {Day7.GetDirectoriesSizeOver100000Sum()}");
 Console.WriteLine($"Puzzle 14: {Day7.GetTheSmallestDirectoryToDelete()}");
+
+Console.WriteLine($"Puzzle 15: {Day8.GetVisibleTreesCount()}");
+Console.WriteLine($"Puzzle 16: {Day8.GetMaxTreeScenicScore()}");
