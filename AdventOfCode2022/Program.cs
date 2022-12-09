@@ -24,3 +24,6 @@ Console.WriteLine($"Puzzle 14: {Day7.GetTheSmallestDirectoryToDelete()}");
 
 Console.WriteLine($"Puzzle 15: {Day8.GetVisibleTreesCount()}");
 Console.WriteLine($"Puzzle 16: {Day8.GetMaxTreeScenicScore()}");
+
+Console.WriteLine($"Puzzle 17: {Day9.GetVisitedPositions(1)}");
+Console.WriteLine($"Puzzle 18: {Day9.GetVisitedPositions(9)}");
