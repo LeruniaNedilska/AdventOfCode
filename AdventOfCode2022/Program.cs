@@ -27,3 +27,7 @@ Console.WriteLine($"Puzzle 16: {Day8.GetMaxTreeScenicScore()}");
 
 Console.WriteLine($"Puzzle 17: {Day9.GetVisitedPositions(1)}");
 Console.WriteLine($"Puzzle 18: {Day9.GetVisitedPositions(9)}");
+
+Console.WriteLine($"Puzzle 19: {Day10.GetSignalStrengthSum()}");
+Console.WriteLine("Puzzle 20:");
+Day10.RenderImage();
