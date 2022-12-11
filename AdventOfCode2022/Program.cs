@@ -31,3 +31,6 @@ Console.WriteLine($"Puzzle 18: {Day9.GetVisitedPositions(9)}");
 Console.WriteLine($"Puzzle 19: {Day10.GetSignalStrengthSum()}");
 Console.WriteLine("Puzzle 20:");
 Day10.RenderImage();
+
+Console.WriteLine($"Puzzle 21: {Day11.GetMonkeyBusinessWithoutWorries()}");
+Console.WriteLine($"Puzzle 22: {Day11.GetMonkeyBusinessWithWorries()}");
