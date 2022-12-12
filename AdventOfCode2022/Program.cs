@@ -34,3 +34,6 @@ Day10.RenderImage();
 
 Console.WriteLine($"Puzzle 21: {Day11.GetMonkeyBusinessWithoutWorries()}");
 Console.WriteLine($"Puzzle 22: {Day11.GetMonkeyBusinessWithWorries()}");
+
+Console.WriteLine($"Puzzle 23: {Day12.GetMinimalDistanceBetweenNodes('S', 'E')}");
+Console.WriteLine($"Puzzle 24: {Day12.GetMinimalDistanceBetweenNodes('E', 'a', true)}");
