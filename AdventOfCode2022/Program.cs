@@ -37,3 +37,6 @@ Console.WriteLine($"Puzzle 22: {Day11.GetMonkeyBusinessWithWorries()}");
 
 Console.WriteLine($"Puzzle 23: {Day12.GetMinimalDistanceBetweenNodes('S', 'E')}");
 Console.WriteLine($"Puzzle 24: {Day12.GetMinimalDistanceBetweenNodes('E', 'a', true)}");
+
+Console.WriteLine($"Puzzle 25: {Day13.GetIndecesSum()}");
+Console.WriteLine($"Puzzle 26: {Day13.GetDecoderKey()}");
