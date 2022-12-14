@@ -40,3 +40,6 @@ Console.WriteLine($"Puzzle 24: {Day12.GetMinimalDistanceBetweenNodes('E', 'a', t
 
 Console.WriteLine($"Puzzle 25: {Day13.GetIndecesSum()}");
 Console.WriteLine($"Puzzle 26: {Day13.GetDecoderKey()}");
+
+Console.WriteLine($"Puzzle 27: {Day14.GetSandUnitCountBeforeAbyss()}");
+Console.WriteLine($"Puzzle 28: {Day14.GetSandUnitCountBeforeBlocked()}");
