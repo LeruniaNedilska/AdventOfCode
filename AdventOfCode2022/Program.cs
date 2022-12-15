@@ -43,3 +43,6 @@ Console.WriteLine($"Puzzle 26: {Day13.GetDecoderKey()}");
 
 Console.WriteLine($"Puzzle 27: {Day14.GetSandUnitCountBeforeAbyss()}");
 Console.WriteLine($"Puzzle 28: {Day14.GetSandUnitCountBeforeBlocked()}");
+
+Console.WriteLine($"Puzzle 29: {Day15.GetUnsuitablePositionsCount()}");
+Console.WriteLine($"Puzzle 30: {Day15.GetTuningFrequency()}");
