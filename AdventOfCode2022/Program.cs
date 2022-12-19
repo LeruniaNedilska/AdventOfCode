@@ -55,3 +55,6 @@ Console.WriteLine($"Puzzle 34: {Day17.GetTowerHeight(1000000000000)}");
 
 Console.WriteLine($"Puzzle 35: {Day18.GetSurfaceArea()}");
 Console.WriteLine($"Puzzle 36: {Day18.GetExteriorSurfaceArea()}");
+
+Console.WriteLine($"Puzzle 37: {Day19.GetQualityLevelSum()}");
+Console.WriteLine($"Puzzle 38: {Day19.GetMaxGeodesMultiplication()}");
