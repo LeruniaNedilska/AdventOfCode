@@ -49,3 +49,6 @@ Console.WriteLine($"Puzzle 30: {Day15.GetTuningFrequency()}");
 
 Console.WriteLine($"Puzzle 31: {Day16.GetMaxPressureRelease()}");
 Console.WriteLine($"Puzzle 32: {Day16.GetMaxPressureReleaseWithElephant()}");
+
+Console.WriteLine($"Puzzle 33: {Day17.GetTowerHeight(2022)}");
+Console.WriteLine($"Puzzle 34: {Day17.GetTowerHeight(1000000000000)}");
