@@ -52,3 +52,6 @@ Console.WriteLine($"Puzzle 32: {Day16.GetMaxPressureReleaseWithElephant()}");
 
 Console.WriteLine($"Puzzle 33: {Day17.GetTowerHeight(2022)}");
 Console.WriteLine($"Puzzle 34: {Day17.GetTowerHeight(1000000000000)}");
+
+Console.WriteLine($"Puzzle 35: {Day18.GetSurfaceArea()}");
+Console.WriteLine($"Puzzle 36: {Day18.GetExteriorSurfaceArea()}");
