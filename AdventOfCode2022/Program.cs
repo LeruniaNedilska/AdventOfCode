@@ -46,3 +46,6 @@ Console.WriteLine($"Puzzle 28: {Day14.GetSandUnitCountBeforeBlocked()}");
 
 Console.WriteLine($"Puzzle 29: {Day15.GetUnsuitablePositionsCount()}");
 Console.WriteLine($"Puzzle 30: {Day15.GetTuningFrequency()}");
+
+Console.WriteLine($"Puzzle 31: {Day16.GetMaxPressureRelease()}");
+Console.WriteLine($"Puzzle 32: {Day16.GetMaxPressureReleaseWithElephant()}");
