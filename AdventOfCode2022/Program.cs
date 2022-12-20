@@ -58,3 +58,6 @@ Console.WriteLine($"Puzzle 36: {Day18.GetExteriorSurfaceArea()}");
 
 Console.WriteLine($"Puzzle 37: {Day19.GetQualityLevelSum()}");
 Console.WriteLine($"Puzzle 38: {Day19.GetMaxGeodesMultiplication()}");
+
+Console.WriteLine($"Puzzle 39: {Day20.GetGrooveCoordinatesSum(1, 1)}");
+Console.WriteLine($"Puzzle 40: {Day20.GetGrooveCoordinatesSum(811589153, 10)}");
