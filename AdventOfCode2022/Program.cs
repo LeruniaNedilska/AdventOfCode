@@ -61,3 +61,6 @@ Console.WriteLine($"Puzzle 38: {Day19.GetMaxGeodesMultiplication()}");
 
 Console.WriteLine($"Puzzle 39: {Day20.GetGrooveCoordinatesSum(1, 1)}");
 Console.WriteLine($"Puzzle 40: {Day20.GetGrooveCoordinatesSum(811589153, 10)}");
+
+Console.WriteLine($"Puzzle 41: {Day21.GetRootMonkeyNumber()}");
+Console.WriteLine($"Puzzle 42: {Day21.GetHumanNumber()}");
