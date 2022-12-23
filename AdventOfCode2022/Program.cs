@@ -66,3 +66,6 @@ Console.WriteLine($"Puzzle 41: {Day21.GetRootMonkeyNumber()}");
 Console.WriteLine($"Puzzle 42: {Day21.GetHumanNumber()}");
 
 Console.WriteLine($"Puzzle 43: {Day22.GetFinalPassword()}");
+
+Console.WriteLine($"Puzzle 45: {Day23.GetNumberOfEmptyTiles(10)}");
+Console.WriteLine($"Puzzle 46: {Day23.GetNumberOfRounds()}");
