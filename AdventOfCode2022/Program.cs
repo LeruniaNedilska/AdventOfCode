@@ -64,3 +64,5 @@ Console.WriteLine($"Puzzle 40: {Day20.GetGrooveCoordinatesSum(811589153, 10)}");
 
 Console.WriteLine($"Puzzle 41: {Day21.GetRootMonkeyNumber()}");
 Console.WriteLine($"Puzzle 42: {Day21.GetHumanNumber()}");
+
+Console.WriteLine($"Puzzle 43: {Day22.GetFinalPassword()}");
