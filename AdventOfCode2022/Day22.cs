@@ -17,6 +17,161 @@
             return 1000 * (currentPosition.x + 1) + 4 * (currentPosition.y + 1) + (int)currentDirection;
         }
 
+        public static int GetFinalPasswordForCube() {
+            (char[][] map, PathDescription[] instructions) = GetInputData();
+            (int x, int y) currentPosition = (0, map[0].Select((x, index) => (x, index)).First(x => x.x == '.').index);
+            var currentDirection = Direction.Right;
+
+            foreach (var instruction in instructions) {
+                (currentPosition, currentDirection) = MoveCube(map, currentPosition, currentDirection, instruction.Movement);
+                currentDirection = Rotate(currentDirection, instruction);
+            }
+
+            return 1000 * (currentPosition.x + 1) + 4 * (currentPosition.y + 1) + (int)currentDirection;
+        }
+
+
+        private static ((int x, int y), Direction direction) MoveCube(char[][] map, (int x, int y) currentPosition, Direction currentDirection, int movement) {
+            var position = currentPosition;
+            switch (currentDirection) {
+                case Direction.Right:
+                    for (var i = 1; i <= movement; i++) {
+                        if (position.y + 1 < map[position.x].Length && map[position.x][position.y + 1] != ' ') {
+                            if (map[position.x][position.y + 1] == '#') {
+                                return (position, currentDirection);
+                            }
+                            position.y += 1;
+                        }
+                        else {
+                            if (position.y + 1 >= map[position.x].Length && position.x >= 0 && position.x < 50) {
+                                if (map[149 - position.x][99] != '#') {
+                                    return MoveCube(map, (149 - position.x, 99), Direction.Left, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x >= 100 && position.x < 150) {
+                                if (map[149 - position.x][149] != '#') {
+                                    return MoveCube(map, (149 - position.x, 149), Direction.Left, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x >= 50 && position.x < 100) {
+                                if (map[49][position.x + 50] != '#') {
+                                    return MoveCube(map, (49, position.x + 50), Direction.Up, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x >= 150 && position.x < 200) {
+                                if (map[149][position.x - 100] != '#') {
+                                    return MoveCube(map, (149, position.x - 100), Direction.Up, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                        }
+                    }
+                    break;
+                case Direction.Left:
+                    for (var i = 1; i <= movement; i++) {
+                        if (position.y - 1 >= 0 && map[position.x][position.y - 1] != ' ') {
+                            if (map[position.x][position.y - 1] == '#') {
+                                return (position, currentDirection);
+                            }
+                            position.y -= 1;
+                        }
+                        else {
+                            if (position.y - 1 < 0 && position.x >= 150 && position.x < 200) {
+                                if (map[0][position.x - 100] != '#') {
+                                    return MoveCube(map, (0, position.x - 100), Direction.Down, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.y - 1 < 0 && position.x >= 100 && position.x < 150) {
+                                if (map[149 - position.x][50] != '#') {
+                                    return MoveCube(map, (149 - position.x, 50), Direction.Right, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x >= 50 && position.x < 100) {
+                                if (map[100][position.x - 50] != '#') {
+                                    return MoveCube(map, (100, position.x - 50), Direction.Down, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x >= 0 && position.x < 50) {
+                                if (map[149 - position.x][0] != '#') {
+                                    return MoveCube(map, (149 - position.x, 0), Direction.Right, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                        }
+                    }
+                    break;
+                case Direction.Down:
+                    for (var i = 1; i <= movement; i++) {
+                        if (position.x + 1 < map.Length && map[position.x + 1][position.y] != ' ') {
+                            if (map[position.x + 1][position.y] == '#') {
+                                return (position, currentDirection);
+                            }
+                            position.x += 1;
+                        }
+                        else {
+                            if (position.x + 1 >= map.Length && position.y >= 0 && position.y < 50) {
+                                if (map[0][position.y + 100] != '#') {
+                                    return MoveCube(map, (0, position.y + 100), Direction.Down, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.y >= 100 && position.y < 150) {
+                                if (map[position.y - 50][99] != '#') {
+                                    return MoveCube(map, (position.y - 50, 99), Direction.Left, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.y >= 50 && position.y < 100) {
+                                if (map[position.y + 100][49] != '#') {
+                                    return MoveCube(map, (position.y + 100, 49), Direction.Left, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                        }
+                    }
+                    break;
+                case Direction.Up:
+                    for (var i = 1; i <= movement; i++) {
+                        if (position.x - 1 >= 0 && map[position.x - 1][position.y] != ' ') {
+                            if (map[position.x - 1][position.y] == '#') {
+                                return (position, currentDirection);
+                            }
+                            position.x -= 1;
+                        }
+                        else {
+                            if (position.x - 1 < 0 && position.y >= 50 && position.y < 100) {
+                                if (map[position.y + 100][0] != '#') {
+                                    return MoveCube(map, (position.y + 100, 0), Direction.Right, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.x - 1 < 0 && position.y >= 100 && position.y < 150) {
+                                if (map[199][position.y - 100] != '#') {
+                                    return MoveCube(map, (199, position.y - 100), Direction.Up, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                            else if (position.y >= 0 && position.y < 50) {
+                                if (map[position.y + 50][50] != '#') {
+                                    return MoveCube(map, (position.y + 50, 50), Direction.Right, movement - i);
+                                }
+                                return (position, currentDirection);
+                            }
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return (position, currentDirection);
+        }
+
         private static (int x, int y) Move(char[][] map, (int x, int y) currentPosition, Direction currentDirection, PathDescription path) {
             var position = currentPosition;
             switch (currentDirection) {
