@@ -73,3 +73,5 @@ Console.WriteLine($"Puzzle 46: {Day23.GetNumberOfRounds()}");
 
 Console.WriteLine($"Puzzle 47: {Day24.GetNumberOfMinutesToReachGoal()}");
 Console.WriteLine($"Puzzle 48: {Day24.GetNumberOfMinutesToReachGoalTwice()}");
+
+Console.WriteLine($"Puzzle 49: {Day25.GetSnafuNumber()}");
