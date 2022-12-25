@@ -70,3 +70,6 @@ Console.WriteLine($"Puzzle 44: {Day22.GetFinalPasswordForCube()}");
 
 Console.WriteLine($"Puzzle 45: {Day23.GetNumberOfEmptyTiles(10)}");
 Console.WriteLine($"Puzzle 46: {Day23.GetNumberOfRounds()}");
+
+Console.WriteLine($"Puzzle 47: {Day24.GetNumberOfMinutesToReachGoal()}");
+Console.WriteLine($"Puzzle 48: {Day24.GetNumberOfMinutesToReachGoalTwice()}");
